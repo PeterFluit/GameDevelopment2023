@@ -1,19 +1,18 @@
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class PlayerController : MonoBehaviour
 {
-    public float speed = 20;
-    public float turnSpeed = 45;
-    public float horizontalInput;
-    public float forwardInput;
-    
     // Update is called once per frame
     void Update()
     {
-        horizontalInput = Input.GetAxis("Horizontal");
-        
-        transform.Translate(Vector3.forward * (Time.deltaTime * speed * forwardInput));
-        transform.Rotate(Vector3.up, turnSpeed * horizontalInput * Time.deltaTime);
-        
+       float xDirection = Input.GetAxis("Horizontal");
+        float zDirection = Input.GetAxis("Vertical");
+
+        Vector3 moveDirection = new Vector3(xDirection, 0.0f, zDirection);
+
+        transform.position += moveDirection;
     }
 }
+
+//code by Sorcerer https://www.youtube.com/watch?v=KiVL5rfVdTw&ab_channel=Sorcerer
