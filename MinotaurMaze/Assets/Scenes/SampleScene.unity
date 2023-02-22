@@ -327,7 +327,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 157865630}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -29.5, y: 1.7, z: 9.8}
+  m_LocalPosition: {x: -15.5, y: 1.7, z: 0.3}
   m_LocalScale: {x: 3.5279, y: 3.5279, z: 3.5279}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -581,7 +581,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 377827804}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -14.2, y: 4.6, z: -4.4}
+  m_LocalPosition: {x: -14.2, y: 4.6, z: 17.8}
   m_LocalScale: {x: 2.2993, y: 2.2993, z: 2.2993}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -893,6 +893,7 @@ GameObject:
   - component: {fileID: 556023268}
   - component: {fileID: 556023273}
   - component: {fileID: 556023272}
+  - component: {fileID: 556023274}
   m_Layer: 0
   m_Name: Minotaur
   m_TagString: Untagged
@@ -971,7 +972,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 556023267}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.9, z: -50.2}
+  m_LocalPosition: {x: -23.3, y: 2.9, z: -2.5}
   m_LocalScale: {x: 6.181939, y: 6.181939, z: 6.181939}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -986,7 +987,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 556023267}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -1007,6 +1008,45 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &556023274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 556023267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d381e5cd5d899944b6188c758295910, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerEnterEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 40b58736ded6e9e4cbef245c9b12b60b, type: 2}
+        m_TargetAssemblyTypeName: FloatData, Assembly-CSharp
+        m_MethodName: UpdateValue
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: -1
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1124119492}
+        m_TargetAssemblyTypeName: ImageBehaviour, Assembly-CSharp
+        m_MethodName: UpdateImage
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: 40b58736ded6e9e4cbef245c9b12b60b, type: 2}
+          m_ObjectArgumentAssemblyTypeName: FloatData, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -1472,7 +1512,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6290457673290454216, guid: 61cdf8466702d424398adcc19d33caf1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 14
+      value: -8.8
       objectReference: {fileID: 0}
     - target: {fileID: 6290457673290454216, guid: 61cdf8466702d424398adcc19d33caf1, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1529,6 +1569,10 @@ PrefabInstance:
     - target: {fileID: 6290457673290454223, guid: 61cdf8466702d424398adcc19d33caf1, type: 3}
       propertyPath: triggerEnterEvent.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
       value: GameAction, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6290457673290454223, guid: 61cdf8466702d424398adcc19d33caf1, type: 3}
+      propertyPath: triggerEnterEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_FloatArgument
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6290457673290454223, guid: 61cdf8466702d424398adcc19d33caf1, type: 3}
       propertyPath: triggerEnterEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgument
